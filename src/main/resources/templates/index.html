@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" th:href="@{styles.css}" />
+
+	<title>Countries of the World</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1><a th:href="@{/}">Countries of the World</a></h1>
+			<form th:action="@{/}" method="post" id="dropdown">
+				Sort Countries:
+				<select name="sort" id="sort">
+					<option value="">-- Sort By --</option>
+					<option value="Country Name">Country Name</option>
+					<option value="Population">Population</option>
+				</select>
+				<button type="submit" name="submit">Sort</button>
+			</form>
+		</div>
+	</header>
+	<div id = "countryContainer" class="container">
+		<div th:each="country: ${countries}" class="country">
+			<a th:href="@{'/country/' + ${country.name}}">
+				<img th:src="@{'/flags/' + ${country.name} + '.gif'}" th:alt="'Flag of ' + ${country.name}"/>
+				<div class="insert">
+				<div class="text" th:text="${country.name}">Country Name</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

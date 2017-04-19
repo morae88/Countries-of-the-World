@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:700|Quicksand');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    margin: 0;
+    color: #aeb1b7;
+    font-family: 'Asap', sans-serif;
+    letter-spacing: 1px;
+    font-size: 40px;
+    padding: 5px 0 0 0;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #a6a8ad;
+}
+
+header {
+    margin: 0;
+    height: 75px;
+    background-color: #393a3d;
+    box-shadow: 0 5px 10px #aeb1b7;
+}
+
+#dropdown {
+    float: right;
+    display: inline;
+    margin-top: 20px;
+    color: white;
+}
+
+button {
+    background-color: #aeb1b7;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 860px;
+}
+
+#countryContainer{
+    margin-top: 20px;
+}
+.country {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    width: 45%;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border: none;
+    box-shadow: inset 5px 5px 5px #aeb1b7;
+}
+
+.insert {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.country:hover img {
+    opacity: 0.3;
+}
+
+.country:hover .insert {
+    opacity: 1;
+}
+
+.country:nth-child(2n+1) {
+    margin-right: 8%;
+}
+
+.country:last-child {
+    left: 25%
+}
+
+.text {
+    background-color: #a6a8ad;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+h2 {
+    font-family: 'Asap', sans-serif;
+    font-size: 76px;
+}
+
+.meta {
+    box-sizing: border-box;
+    margin: 0;
+    float: left;
+    padding: -10px 0 0 100px;
+    display: inline;
+}
+
+.flag {
+    float: right;
+    width: 50%
+}
+
+.meta h4 {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 601px) {
+    header {
+        text-align: left;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .country {
+        display: block;
+        border: 1px solid #000;
+        min-width: 100%;
+    }
+
+    .country:last-child {
+        left: auto;
+    }
+
+    .country-details h2 {
+        border-bottom: none;
+        font-size: 4rem;
+    }
+
+    .country-details .meta {
+        width: 65%;
+        float: left;
+    }
+
+    .country-details .meta .stat {
+        float: left;
+        width: 50%;
+    }
+
+    .country-details .flag {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #dropdown{
+        float: none;
+        display: none;
+    }
+}
